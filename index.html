@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/506e542bea.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="follow-us-section">
+        <div class="email-number-container">   
+            <p class="email-text"><i class="fa-solid fa-envelope icon"></i> info@webpacklabels.com</p>   
+            <p class="number"><i class="fa-solid fa-phone icon"></i>+91-6300682127</p>
+        </div>
+        <ul class="icons-container">
+            <li class="icon-social-img"><i class="fa-brands fa-facebook-f"></i></li>
+            <li class="icon-social-img"><i class="fa-brands fa-twitter"></i></li>
+            <li class="icon-social-img"><i class="fa-brands fa-instagram"></i></li>
+            <li class="icon-social-img"><i class="fa-brands fa-linkedin-in"></i></li>
+        </ul>
+    </div>
+    <!-- create navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+        <a class="navbar-brand" href="#"><img src="https://media.licdn.com/dms/image/v2/C560BAQFp8ZBY_-P05A/company-logo_200_200/company-logo_200_200/0/1637757614009/aakruti_solutions_logo?e=2147483647&v=beta&t=s7I5HHoK_8MOaZrUUZg76uwfFcpN3a-JvLZe4ZYT1UY" class="navbar-logo"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" id='navItem1' href="#homeSection">
+              HOME
+              <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" id='navItem2' href="#aboutSection">ABOUT US</a>
+            <a class="nav-link" id='navItem3' href="#productsSection">PRODUCTS</a>
+            <a class="nav-link" id='navItem4' href="#clientsSection">CLIENTS</a>
+            <a class="nav-link" id='navItem5' href="#footer">CONTACT US</a>
+          </div>
+        </div>
+        </div>
+    </nav>
+    <!-- create home section -->
+    <section id="homeSection">
+        <div id="carouselExampleIndicators" class="carousel slide container ml - 5" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="text-container">
+                        <h1 class="home-heading">Highest Quality Packaging Solutions</h1>
+                        <p class="home-description">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum</p>
+                        <button class="read-more-button">ReadMore..</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="text-container">
+                        <h1 class="home-heading">Highest Quality Packaging Solutions</h1>
+                        <p class="home-description">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum
+                        </p>
+                        <button class="read-more-button">Readmore..</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="text-container">
+                        <h1 class="home-heading">Highest Quality Packaging Solutions</h1>
+                        <p class="home-description">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum
+                        </p>
+                        <button class="read-more-button">Readmore..</button>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- create about us section -->
+    <section id='aboutSection'>
+        <div class='about-text-container'>
+            <div class='heading-underline-container'>
+                <h1 class='about-heading'>About us</h1>
+                <div class='underline'></div>
+            </div>
+            <p id="text" class="about-desc"></p>
+            <button class='about-btn' id="readButton" onclick="onToggleText()">ReadMore..<i class="fa-solid fa-chevron-right next-icon"></i></button>
+        </div>
+        <div class='img-container'>
+            <img src='https://img.freepik.com/free-photo/close-up-side-view-engineer-architect-supervising-construction_23-2148233789.jpg?t=st=1738561139~exp=1738564739~hmac=dd5bb3ca0879185c818372edb5b3e6f50946f659acb2e00af35dd596d4e4f5e9&w=900' alt='working' class='about-img' />
+        </div>
+    </section>
+    <!-- create products section -->
+    <section id='productsSection'>
+        <h1 class='product-heading'>What We do</h1>
+        <p class='product-description'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the prinating
+        </p>
+        <div class='images-container'>
+            <div class='image-container'>
+                <img src='https://img.freepik.com/free-photo/front-view-man-working-eco-friendly-wind-power-project-with-laptop-wind-turbines_23-2148847764.jpg?t=st=1738563858~exp=1738567458~hmac=cc46a7d5fb5b5bcd4942c1ee332f8c5940e7e0fe4b10c5856e561eff9ec6d10a&w=900' alt='' class='image' />
+                <label class='label-text'>Self-adhesive Labels</label>
+            </div>
+            <div class='image-container'>
+                <img src='https://img.freepik.com/free-photo/close-up-hand-holding-tube_23-2148794458.jpg?t=st=1738574468~exp=1738578068~hmac=78e7e0a7e7ab8899495c564b35ef9bca02175680886b98d80809b29694f96bff&w=360' alt='' class='image' />
+                <label class='label-text'>Tamper evident labels</label>
+            </div>
+            <div class='image-container'>
+                <img src='https://img.freepik.com/free-photo/male-pharmacist-working-drugstore_23-2150359211.jpg?uid=R79145184&ga=GA1.1.829025863.1738515082&semt=ais_hybrid' alt='' class='image' />
+                <label class='label-text'>VDP & 100% Inspection</label>
+            </div>
+        </div>
+        <button class='button'>More..</button>
+    </section>
+    <!-- create clients section -->
+    <section id="clientsSection">
+        <h1 class="client-heading">Our Clients</h1>
+        <div class="main">
+            <button onclick="prevClient()"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-container">
+                <div class="carousel" id="clientCarousel"></div>
+            </div>
+            <button onclick="nextClient()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+    <!-- create footer section -->
+    <footer id='footer'>
+        <div class='top-section'>
+            <div class='company-description'>
+                <h1 class='webpack-heading'>WEBPACK</h1>
+                <p class='description'>Lorem Ipsum is empty dummy text of the printing
+                    and typesetting industry Lorem Ipsum Lorem Ipsum
+                    is simply dumply text of the printing and typesetting industry
+                    Lorem Ipsum Lorem Ipsum
+                    is simply dumply text of the printing and typesetting industry
+                </p>
+                <div>
+                    <i class="fa-brands fa-facebook icon"></i>
+                    <i class="fa-brands fa-instagram icon"></i>
+                    <i class="fa-brands fa-square-twitter icon"></i>
+                    <i class="fa-brands fa-linkedin icon"></i>
+                </div>
+            </div>
+
+            <div class='company-links'>
+                <h2 class='company-heading'>Company</h2>
+                <div class='links-section'>
+                    <i class="fa-solid fa-chevron-right next-icon"></i>
+                    <p class='link'>About us</p>
+                </div>
+                <div class='links-section'>
+                    <i class="fa-solid fa-chevron-right next-icon"></i>
+                    <p class='link'>Products</p>
+                </div>
+                <div class='links-section'>
+                    <i class="fa-solid fa-chevron-right next-icon"></i>
+                    <p class='link'>Clients</p>
+                </div>
+                <div class='links-section'>
+                    <i class="fa-solid fa-chevron-right next-icon"></i>
+                    <p class='link'>Terms and Conditions</p>
+                </div>
+            </div>
+            <div class='company-contact-details'>
+                <h2 class='company-heading'>Get in touch</h2>
+                <div class='contact-information'>
+                    <i class="fa-solid fa-phone"></i>
+                    <p class='contact-details'>+91 8989898989</p>
+                </div>
+                <div class='contact-information'>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class='contact-details'>info@webpacklabels.com</p>
+                </div>
+                <div class='contact-information'>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class='contact-details'>Plat No.150/3,S.V.Industrial Estate,<br />
+                        I.D.A Bollaram,Jinnaram (M),<br />
+                        Sangareddy (D), Hyderbad - 502325</p>
+                </div>
+            </div>
+        </div>
+        <div class='line'></div>
+        <div class='copy-rights-container'>
+            <p class='copy-heading'>Copy rights @ 2025 All rights reserved</p>
+            <p class='copy-heading'>Designed by <span class='name'>Aakruti</span></p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
