@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css"/>
+    <title>Webpacklabels</title>
     <script src="https://kit.fontawesome.com/506e542bea.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -127,13 +128,16 @@
     </section>
     <!-- create clients section -->
     <section id="clientsSection">
-        <h1 class="client-heading">Our Clients</h1>
-        <div class="main">
-            <button onclick="prevClient()"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="carousel-container">
-                <div class="carousel" id="clientCarousel"></div>
-            </div>
-            <button onclick="nextClient()"><i class="fa-solid fa-chevron-right"></i></button>
+        <h1>Our Clients</h1>
+        <div class="client-container">
+            <button id="prevBtn" onclick="prevClient()" disabled><</button>
+                    <div class="client-wrapper">
+                        <div class="client active">Dr Reddy's</div>
+                        <div class="client">HETERO</div>
+                        <div class="client">BHARAT BIOTECH</div>
+                        <div class="client">Biocoin</div>
+                    </div>
+            <button id="nextBtn" onclick="nextClient()">></button>
         </div>
     </section>
     <!-- create footer section -->

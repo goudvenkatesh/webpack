@@ -22,34 +22,54 @@ function onToggleText() {
     isCollapse = !isCollapse;
 }
 
-//adding clients functionality
-const clients = ["Dr.Reddy's", "HETERO", "Bharat Biotech", "Biocoin"];
 
-let startIndex = 0;
-const visibleClients = 4;
 
-function renderClients() {
-    let carousel = document.getElementById("clientCarousel");
-    carousel.innerHTML = "";
-    let i=0;
-    while (i<visibleClients){
-        let index = (startIndex + i) % clients.length;
-        let clientEl = document.createElement("div");
-        clientEl.classList.add("client");
-        clientEl.textContent = clients[index];
-        carousel.appendChild(clientEl);
-        i++;
+let currentIndex = 0;
+const clients = document.querySelectorAll('.client');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+function updateActiveClient() {
+    clients.forEach((client, index) => {
+        client.classList.toggle('active', index === currentIndex);
+    });
+
+    prevBtn.disabled = currentIndex === 0;
+
+    nextBtn.disabled = currentIndex === clients.length - 1;
+}
+
+function prevClient() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateActiveClient();
     }
 }
 
 function nextClient() {
-    startIndex = (startIndex + 1) % clients.length;
-    renderClients();
+    if (currentIndex < clients.length - 1) {
+        currentIndex++;
+        updateActiveClient();
+    }
 }
 
-function prevClient() {
-    startIndex = (startIndex - 1 + clients.length) % clients.length;
-    renderClients();
+function autoScroll(){
+    nextClient()
 }
 
-renderClients();
+let autoScrollInterval=setInterval(autoScroll,3000);
+
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+function restartAutoScroll() {
+    autoScrollInterval = setInterval(autoScroll, 3000);
+}
+
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        stopAutoScroll();
+        setTimeout(restartAutoScroll, 3000); 
+    });
+});

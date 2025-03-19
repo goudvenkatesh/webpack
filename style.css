@@ -155,7 +155,7 @@
 
 /* home section */
 #homeSection {
-    background-image: url('https://img.freepik.com/free-photo/red-light-round-podium-black-background-mock-up_43614-950.jpg?t=st=1740377481~exp=1740381081~hmac=9581e998b0d5b6e6c5141b030386c4c9a39bfddb076b9921e4ae77d8ffe7e476&w=900');
+    background-image: url('https://img.freepik.com/free-photo/programming-background-concept_23-2150170158.jpg?t=st=1742273370~exp=1742276970~hmac=a5adba221c5093acde74bec6d1a0158a0a72f3983b001a28a8981b5b2c85d93a&w=1060');
     height: 70vh;
     background-size: cover;
     padding-top: 8rem;
@@ -359,40 +359,48 @@
     font-family: "Roboto";
     font-size: 40px;
 }
-.main{
-   display: flex; 
-    
-}
-.carousel-container {
-    margin: auto;
-    padding: 10px;
+.client-container {
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
 }
 
-.carousel {
+.client-wrapper {
     display: flex;
-    gap: 10px;
-}
-
-.client {
-    width: 100px;
-    padding: 10px;
-    background: lightgray;
-    border: 1px solid blue;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-button {
-    padding: 10px;
+.client {
+    width: 120px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
     margin: 5px;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: #0407c6;
+    border: 2px solid grey;
 }
 
+.client.active {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+button:disabled {
+    color: grey;
+}
 /* create footer css */
 #footer {
     background: #000000;
